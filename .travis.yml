@@ -1,6 +1,6 @@
 env:
   global:
-  - secure: ZFr72PV9YPzRfWAa+FoRZu7WoZkpNDa1CLxEMiP+9c+WzSIFIoBAklcgDtTflvjgXvOUWHkVK9rYS4i3yiJefU3im9RIooeoLOYRyrkpndEoPJFjasiuC8LKazYcVH+2yYb2nmXXiHd1UKD7Sk1ZOmCRvgTpUegpi/GLD0tbyWKe1A0BRJkV4bjowLNo1lEDiVxxB0j+bRUbOtn3IqSVQWAcKp+av7l/0VJf31MVgzFPAeTGDFvPQY0kcLJI9aq93GPwts89Ok4c/lQKQz5bthY4PUYy/SqPRGmtkaH8SOjWxb/DUgVY02r4qoJ77eVnY11oO6DHtjM+Uvod8yJ8QQAdtlSf7YWhGotJaxs/lm83lkyuTUeE3hcMct7TqsAzLSn/hPpTRHu/FfjQbb+X4J8QI20U4gTq+OPCWDJW0Gf+RCpYJCYsFL/pkKb3RAFlhRl03B5Twb9KLmkfkgL+fFQHPdtzeXZuBvUr7exaOkVcARWhWnrQFTGK6FYAkxrIP4bG2qG+OKakRPV6Uot+cWTBcO54gqbbeZVliDbtHEx6v7gpCvuDVGsbZwlK5tHkZK70JfxoN/jpcjXlya49XA/BiNbrrfi8Vqf8uTtJxiMWuqRwND2uAPeBK1D8EfO1uHrGJEPqgrT9BC8/1Pkx9UOh5Sl8CB2a5ff4tANDP3Y=
+  - secure: C59nIOZUuMj5Wm/gerqwdSNO4CFPyLcVVLi4QcjQu0ArYkYy9P/0B9kkm9/4p0pQzN6esftomoNyLMxpVNRrvchrK5v+mMT0Sui1pnEusaJZNKjLsTmxlYKhs+zrOcd7dFf9ay32ByjQ105XoQsrdpLJKy389tR+tAtXIYRqk5tFQEm9JNA1idbTZxazXid+MoaYsEVFJ0c0X9I16p8FmPCKT7i6uzfwODsMyBmfsLzS35m49lTWbZ9raL1LqQoWodoohcpFcp7tfCSlB4oMCU5X2YMInDZJFcmwoNvshYFpwNBxC8l0THP2qHta/tj3L2b74ZGEKb2sjzWK7mgzoxJ0VveOKzdsr8ZmWmzNyxyRX1d0L3/JjV5eF6DOCXBCF7Iy0tw0zmlMe5P5fD+SowqKNlTr8CvO/qElcXObH6LnFOU9BtlqBOzqudCUsOG0bOm5GrApyk8XYMHXi/MevD1m+PE1u/yEhgr6Bg5N5hYYPwfc1EAzaH4tL1kyy/km5bY9yiVcFDzW4Q13/NvKHeRKjs/PAf+9uW10LqzwGoD1McEpy1MRkNmVNr9PRHemba4YuvX4YNHprucl0YtBfnJxEYP6UI02l5FGRMAjGOW59LrGer1OyhJlt8rAlYEHOY912ZqqiT58Pik9vjeejVcJ2rzu8suO3LpIXIohOYQ=
   - GIT_DEPLOY_DIR=public
   - GIT_DEPLOY_BRANCH=master
   - GIT_DEPLOY_USERNAME="Travis CI"
@@ -9,7 +9,7 @@ sudo:
   - required
 branches:
   only:
-  - master
+    - master
 install:
   - rm -rf public || exit 0
   - wget `curl -s https://api.github.com/repos/spf13/hugo/releases/latest | jq --raw-output '.assets[6] | .browser_download_url'` -O /tmp/hugo.deb
