@@ -1,5 +1,5 @@
 builddrafts = false
-baseurl = "http://gumoco.nl"
+baseurl = "http://www.gumoco.nl"
 canonifyurls = true
 title = "Gumoco - IT Consultancy - Freelance IT Consultant in middleware and cloud solutions"
 languageCode = "en-us"
