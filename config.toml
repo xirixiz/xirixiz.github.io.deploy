@@ -1,0 +1,13 @@
+builddrafts = false
+baseurl = "http://gumoco.nl"
+canonifyurls = true
+title = "Gumoco - IT Consultancy - Freelance IT Consultant in middleware and cloud solutions"
+languageCode = "en-us"
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[params]
+  description = "Gumoco - Bram van Dartel"
+  author = "Bram van Dartel"

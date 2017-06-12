@@ -1,0 +1,28 @@
+#!/bin/bash
+set -x
+echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
+# setup constants
+REPO="xirixiz.github.io"
+GH_REPO="github.com/xirixiz/${REPO}.git"
+MSG=$(git log -1 --oneline)
+git config --global user.email "spam@rootrulez.com"
+git config --global user.name "Travis CI"
+
+# Build the project.
+hugo -t dimension # if using a theme, replace by 'hugo -t <yourtheme>'
+
+git clone "https://$GH_REPO"
+# clean up repo
+cd  ${REPO}
+rm -rf *
+cd ..
+# copy files to commit
+cp -R public/* ${REPO}
+cd ${REPO}
+git remote
+git add -A :/
+git commit -a -m "via travis -- for $MSG"
+git push "https://${GH_TOKEN}@${GH_REPO}" master > /dev/null 2>&1
+
+#git clone "${GIT_DEPLOY_REPO}"
+#git push "${GIT_DEPLOY_REPO}" master > /dev/null 2>&1

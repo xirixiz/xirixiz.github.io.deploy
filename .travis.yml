@@ -1,0 +1,18 @@
+env:
+  global:
+  - secure: ZFr72PV9YPzRfWAa+FoRZu7WoZkpNDa1CLxEMiP+9c+WzSIFIoBAklcgDtTflvjgXvOUWHkVK9rYS4i3yiJefU3im9RIooeoLOYRyrkpndEoPJFjasiuC8LKazYcVH+2yYb2nmXXiHd1UKD7Sk1ZOmCRvgTpUegpi/GLD0tbyWKe1A0BRJkV4bjowLNo1lEDiVxxB0j+bRUbOtn3IqSVQWAcKp+av7l/0VJf31MVgzFPAeTGDFvPQY0kcLJI9aq93GPwts89Ok4c/lQKQz5bthY4PUYy/SqPRGmtkaH8SOjWxb/DUgVY02r4qoJ77eVnY11oO6DHtjM+Uvod8yJ8QQAdtlSf7YWhGotJaxs/lm83lkyuTUeE3hcMct7TqsAzLSn/hPpTRHu/FfjQbb+X4J8QI20U4gTq+OPCWDJW0Gf+RCpYJCYsFL/pkKb3RAFlhRl03B5Twb9KLmkfkgL+fFQHPdtzeXZuBvUr7exaOkVcARWhWnrQFTGK6FYAkxrIP4bG2qG+OKakRPV6Uot+cWTBcO54gqbbeZVliDbtHEx6v7gpCvuDVGsbZwlK5tHkZK70JfxoN/jpcjXlya49XA/BiNbrrfi8Vqf8uTtJxiMWuqRwND2uAPeBK1D8EfO1uHrGJEPqgrT9BC8/1Pkx9UOh5Sl8CB2a5ff4tANDP3Y=
+  - GIT_DEPLOY_DIR=public
+  - GIT_DEPLOY_BRANCH=master
+  - GIT_DEPLOY_USERNAME="Travis CI"
+  - GIT_DEPLOY_EMAIL="spam@rootrulez.com"
+sudo:
+  - required
+branches:
+  only:
+  - master
+install:
+  - rm -rf public || exit 0
+  - wget `curl -s https://api.github.com/repos/spf13/hugo/releases/latest | jq --raw-output '.assets[6] | .browser_download_url'` -O /tmp/hugo.deb
+  - sudo dpkg -i /tmp/hugo.deb
+script:
+  - bash ./deploy.sh
