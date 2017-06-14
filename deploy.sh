@@ -9,7 +9,7 @@ git config --global user.email "spam@rootrulez.com"
 git config --global user.name "Travis CI"
 
 # Build the project.
-hugo -t dimension # if using a theme, replace by 'hugo -t <yourtheme>'
+hugo -t hugo-sustain # if using a theme, replace by 'hugo -t <yourtheme>'
 
 git clone "https://$GH_REPO"
 # clean up repo
