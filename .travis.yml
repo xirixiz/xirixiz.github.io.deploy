@@ -5,6 +5,7 @@ env:
   - GIT_DEPLOY_BRANCH=master
   - GIT_DEPLOY_USERNAME="Travis CI"
   - GIT_DEPLOY_EMAIL="spam@rootrulez.com"
+sudo: required
 branches:
   only: master
 git:
