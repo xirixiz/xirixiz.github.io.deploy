@@ -13,6 +13,7 @@ hugo
 
 git clone "https://$GH_REPO"
 cd ${REPO} && rm -rf *
+ls -al ../public
 cd .. && cp -r public/* ${REPO}
 ls -al ${REPO}
 cd ${REPO}
