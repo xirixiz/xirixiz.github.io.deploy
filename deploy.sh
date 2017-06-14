@@ -10,6 +10,7 @@ git config --global user.name "Travis CI"
 
 # Build the project.
 hugo -t hugo-sustain
+ls -al ../public
 
 git clone "https://$GH_REPO"
 cd ${REPO} && rm -rf *
