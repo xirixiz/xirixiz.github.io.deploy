@@ -5,12 +5,11 @@ env:
   - GIT_DEPLOY_BRANCH=master
   - GIT_DEPLOY_USERNAME="Travis CI"
   - GIT_DEPLOY_EMAIL="spam@rootrulez.com"
-sudo: required
 branches:
   only: master
 git:
   submodules: false
 language: go
 go: 1.8.3
-script: ./deploy.sh
+script: bash ./deploy.sh
 install: go get github.com/spf13/hugo
