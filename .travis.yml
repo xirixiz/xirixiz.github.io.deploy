@@ -6,11 +6,10 @@ env:
   - GIT_DEPLOY_USERNAME="Travis CI"
   - GIT_DEPLOY_EMAIL="spam@rootrulez.com"
 branches:
-  only:
-  - master
-install:
-  - wget `curl -s https://api.github.com/repositories/11180687/releases/latest | jq --raw-output '.assets[6] | .browser_download_url'` -O /tmp/hugo.deb
-  - sudo dpkg -i /tmp/hugo.deb
-  - hugo -t hugo-sustain
-script:
-  - bash ./deploy.sh
+  only: master
+git:
+  submodules: false
+language: go
+go: 1.8.3
+script: ./deploy.sh
+install: go get github.com/spf13/hugo
