@@ -9,7 +9,7 @@ git config --global user.email "spam@rootrulez.com"
 git config --global user.name "Travis CI"
 
 # Build the project.
-hugo
+hugo -t hugo-sustain
 
 git clone "https://$GH_REPO"
 cd ${REPO} && rm -rf *
