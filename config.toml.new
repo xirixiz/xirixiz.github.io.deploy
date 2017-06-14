@@ -1,7 +1,0 @@
-baseurl = "http://www.gumoco.nl"
-title = "Gumoco - IT Consultancy - Freelance IT Consultant in middleware and cloud solutions"
-author = "Bram van Dartel"
-copyright = "Copyright (c) 2009 - 2017, Bram van Dartel; all rights reserved."
-canonifyurls = true
-paginate = 3
-languageCode = "en-us"

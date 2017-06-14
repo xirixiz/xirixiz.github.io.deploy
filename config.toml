@@ -1,13 +1,34 @@
-builddrafts = false
-baseurl = "http://www.gumoco.nl"
-canonifyurls = true
-title = "Gumoco - IT Consultancy - Freelance IT Consultant in middleware and cloud solutions"
-languageCode = "en-us"
+baseurl = "https://gumoco.nl/"
+languageCode = "en-US"
+title = "Gumoco - Bram van Dartel - IT Consultancy"
+# Enable comments by entering your Disqus shortname
+disqusShortname = ""
+# Enable Google Analytics by entering your tracking code
+googleAnalytics = ""
+theme = "hugo-sustain"
 
-[taxonomies]
-  category = "categories"
-  tag = "tags"
+[permalinks]
+  post = "/:year/:month/:day/:slug"
 
 [params]
-  description = "Gumoco - Bram van Dartel"
+  avatar = "bram.jpg"
   author = "Bram van Dartel"
+  description = "Gumoco - IT Consultancy"
+
+  # Custom assets can be linked with their paths relative to static/
+  custom_css = []
+  custom_js  = []
+
+[params.social]
+  Github        = "xirixiz"
+  Email         = "root@rootrulez.com"
+  Twitter       = "xirixiz"
+  LinkedIn      = "bram-van-dartel-a341115"
+  Stackoverflow = "xirixiz"
+
+## Main Menu
+#[[menu.main]]
+#  name = "projects"
+#  identifier = "projects"
+#  weight = 200
+#  url = "/projects/"
