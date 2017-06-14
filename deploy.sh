@@ -9,7 +9,6 @@ git config --global user.email "spam@rootrulez.com"
 git config --global user.name "Travis CI"
 
 echo "Cloning target repository"
-rm -rf public
 git clone "https://$GH_REPO" public
 
 echo "Running hugo"
