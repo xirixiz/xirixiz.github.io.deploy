@@ -9,20 +9,28 @@ git config --global user.email "spam@rootrulez.com"
 git config --global user.name "Travis CI"
 
 # Build the project.
-hugo -t hugo-sustain # if using a theme, replace by 'hugo -t <yourtheme>'
+hugo # if using a theme, replace by 'hugo -t <yourtheme>'
 
 git clone "https://$GH_REPO"
-# clean up repo
 cd  ${REPO}
-rm -rf *
-cd ..
-# copy files to commit
-cp -R public/* ${REPO}
-cd ${REPO}
-git remote
-git add -A :/
+rm -rf public
+hugo
+git submodule add -b master "https://${GH_TOKEN}@${GH_REPO}" public
+
+cd public
+git add -A
 git commit -a -m "via travis -- for $MSG"
-git push "https://${GH_TOKEN}@${GH_REPO}" master > /dev/null 2>&1
+git push origin master
+cd ..
+#rm -rf *
+#cd ..
+# copy files to commit
+#cp -R public/* ${REPO}
+#cd ${REPO}
+#git remote
+#git add -A :/
+#git commit -a -m "via travis -- for $MSG"
+#git push "https://${GH_TOKEN}@${GH_REPO}" master > /dev/null 2>&1
 
 #git clone "${GIT_DEPLOY_REPO}"
 #git push "${GIT_DEPLOY_REPO}" master > /dev/null 2>&1
