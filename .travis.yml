@@ -12,7 +12,7 @@ branches:
     - master
 install:
   - rm -rf public || exit 0
-  - wget `curl -s https://api.github.com/repos/spf13/hugo/releases/latest | jq --raw-output '.assets[6] | .browser_download_url'` -O /tmp/hugo.deb
+  - wget `curl -s https://api.github.com/repositories/11180687/releases/latest | jq --raw-output '.assets[6] | .browser_download_url'` -O /tmp/hugo.deb
   - sudo dpkg -i /tmp/hugo.deb
 script:
   - bash ./deploy.sh
