@@ -13,12 +13,11 @@ git clone "https://$GH_REPO" public
 
 echo "Running hugo"
 hugo
-ls -al public
 
 echo "Publishing to branch"
 cd public
 git add -A .
 git commit -m "Deployed to Github Pages - ${MSG}"
-git push --force --quiet "https://$GH_REPO" master:master
+git push --force --quiet "https://${GH_TOKEN}@${GH_REPO}" master:master
 
 echo "Done"
