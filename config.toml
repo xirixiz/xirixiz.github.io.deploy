@@ -1,6 +1,6 @@
-baseurl = "http://www.gumoco.nl/"
+baseurl = "http://www.yunta.nl/"
 languageCode = "en-US"
-title = "Gumoco - Bram van Dartel - IT Consultancy"
+title = "Yunta - Bram van Dartel - IT Consultancy"
 # Enable comments by entering your Disqus shortname
 disqusShortname = ""
 # Enable Google Analytics by entering your tracking code
@@ -13,7 +13,7 @@ theme = "hugo-sustain"
 [params]
   avatar = "bram.jpg"
   author = "Bram van Dartel"
-  description = "Gumoco - IT Consultancy"
+  description = "Yunta - IT Consultancy"
 
   # Custom assets can be linked with their paths relative to static/
   custom_css = []
@@ -21,7 +21,7 @@ theme = "hugo-sustain"
 
 [params.social]
   Github        = "xirixiz"
-  Email         = "root@rootrulez.com"
+  Email         = "bram@yunta.nl"
   Twitter       = "xirixiz"
   LinkedIn      = "bram-van-dartel-a341115"
   Stackoverflow = "xirixiz"
