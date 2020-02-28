@@ -22,7 +22,6 @@ theme = "hugo-sustain"
 [params.social]
   Github        = "xirixiz"
   Email         = "bram@yunta.nl"
-  Twitter       = "xirixiz"
   LinkedIn      = "bram-van-dartel-a341115"
   Stackoverflow = "xirixiz"
 
